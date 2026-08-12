@@ -1,0 +1,1 @@
+Put setup videos here as MP4 files. The website will automatically show files listed in script.js.
