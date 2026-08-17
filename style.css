@@ -9,41 +9,62 @@ a{color:inherit}
 .nav{display:flex;gap:40px}.nav a{text-decoration:none;font-size:14px;font-weight:600}.nav a:hover{color:var(--green)}
 .menu-btn{display:none;border:0;background:none;width:38px;cursor:pointer}.menu-btn span{display:block;height:2px;background:var(--ink);margin:6px 0}
 
-.hero{
-  min-height:770px;
-  height:94vh;
-  position:relative;
-  overflow:hidden;
-  display:grid;
-  grid-template-columns:44% 56%;
-  align-items:stretch;
-  padding:82px 0 0;
-  background:#f8faf7;
+.hero {
+  min-height: calc(94vh - 82px);
+  height: calc(94vh - 82px);
+  margin-top: 82px;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 44% 56%;
+  align-items: stretch;
+  padding: 0;
+  background: #f8faf7;
 }
-.hero-bg{
-  position:relative;
-  grid-column:2;
-  grid-row:1;
-  width:100%;
-  height:100%;
-  background:url("images/mvp-exterior.png") center center/contain no-repeat;
-  background-color:#edf4ef;
+.header {
+  height: 82px;
+  position: fixed;
+  z-index: 100;
+  inset: 0 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 4vw;
+
+  background: #f1f7f2;
+  border-bottom: 1px solid #dce8df;
+
+  box-shadow: 0 2px 12px rgba(35, 80, 60, 0.04);
+}
+.hero-bg {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/first_picture.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-color: #edf4ef;
 }
 .hero-shade{
   display:none;
 }
-.hero-content{
-  position:relative;
-  z-index:2;
-  grid-column:1;
-  grid-row:1;
-  width:auto;
-  margin:0;
-  padding:95px 35px 45px 4vw;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  background:#f8faf7;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  width: auto;
+  margin: 0;
+  padding: 60px 35px 45px 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f8faf7;
 }
 .eyebrow{font-size:11px;font-weight:800;letter-spacing:.18em;margin-bottom:20px;color:var(--green);position:relative;padding-left:28px}.eyebrow:before{content:'';position:absolute;left:0;top:50%;width:18px;height:2px;background:var(--gold)}
 .hero h1{font-size:clamp(52px,6vw,82px);letter-spacing:-.055em;color:var(--dark)}
@@ -66,7 +87,34 @@ a{color:inherit}
 .video-slide{position:relative}.video-slide video{width:100%;height:100%;display:block;object-fit:contain;background:#0d1f1d}
 .slider-dots{display:flex;justify-content:center;gap:7px;margin-top:18px}.dot{width:7px;height:7px;border-radius:50%;background:#b8c4bf;cursor:pointer}.dot.active{width:25px;border-radius:8px;background:var(--green)}
 .video-block{padding-top:10px}
+.photo-slider {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #edf4ef;
+}
 
+.photo-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.photo-slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #edf4ef;
+}
+
+.photo-slide img {
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+}
 .contact{background:linear-gradient(135deg,#153a35,#245b48);color:white;padding:130px 7vw;position:relative;overflow:hidden}.contact:after{content:'';position:absolute;width:420px;height:420px;border:1px solid rgba(196,154,74,.22);border-radius:50%;right:-150px;top:-160px}.contact-top{display:grid;grid-template-columns:1fr .65fr;gap:10vw;align-items:end}.contact .eyebrow{color:#b9d6ca}.contact h2{font-size:clamp(48px,6vw,80px);margin-bottom:0}.contact-intro{color:rgba(255,255,255,.68);font-size:18px;max-width:430px}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:75px}
 .contact-card{min-height:230px;padding:30px;border:1px solid rgba(255,255,255,.17);border-radius:12px;text-decoration:none;position:relative;transition:.25s}.contact-card:hover{background:rgba(255,255,255,.07);transform:translateY(-4px)}.contact-label{display:block;color:#a9c9bb;font-size:10px;font-weight:800;letter-spacing:.18em;margin-bottom:55px}.contact-card strong{font-family:"Manrope";font-size:20px;line-height:1.35}.contact-arrow{position:absolute;right:25px;bottom:23px;color:#b9d6ca;font-size:22px}
 footer{background:#102623;color:rgba(255,255,255,.62);display:flex;align-items:center;justify-content:space-between;gap:25px;padding:28px 7vw;font-size:12px}footer img{width:70px;height:48px;object-fit:contain}

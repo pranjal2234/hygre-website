@@ -56,8 +56,9 @@ function setupSlider(trackSelector, dotSelector, prevSelector, nextSelector){
 setupSlider('.photo-track','.photo-dots','.photo-prev','.photo-next');
 
 const videos=[
+  'videos/Marketing.mp4',
   'videos/Dji_0714_compressed.mp4',
-  'videos/system-demo.mp4'
+  
 ];
 
 const videoTrack=document.getElementById('videoTrack');
